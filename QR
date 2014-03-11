@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+'''
+A python script to convert the text into QR image.
+Usage:
+In Terminal, qr <filename> <text_content>
+(The resultant image with QR Code will be saved on the same directory from which this script is executed)
+
+'''
+#Script by Vikneshwaren
+
+
+from qrcode import * #Import statements
+from sys import argv 
+
+
+def QRGen(Title, Data):
+	qr = QRCode(version=None, error_correction=ERROR_CORRECT_L)
+	
+	#Adding the text content
+	qr.add_data(Data) # To Generate the QRCode	
+	qr.make(fit = True)
+	image = qr.make_image() # Image holds PIL.Image.Image object
+	image.save(Title + '.png') #Saving the image
+
+
+if __name__ == '__main__':
+	QRGen(str(argv[1]), str(argv[2]))
