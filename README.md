@@ -2,11 +2,11 @@ QR_Code
 =======
 Usage: 
 
-Run the below command to install the dependencies:
+Run the below command to install the dependencies: <br>
 sudo pip install qrcode
 
-In Terminal cd to the directory and run the below command: 
-qr <filename> <text_content> 
+In Terminal cd to the directory and run the below command: <br>
+qr filename text_content
 
 Eg: qr sample vikneshwaren.u@gmail.com
 
